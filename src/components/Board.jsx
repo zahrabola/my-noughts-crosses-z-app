@@ -2,23 +2,59 @@ import React from 'react';
 import Tile from "./Tile"
 import Strike from './Strike';
 
-const Board = ({tiles}) => {
+const Board = ({tiles, onClickTile}) => {
     return (
         <div className="board">
             
-            <Tile value={tiles[0]} className="r-border b-border"/> 
-            <Tile  value={tiles[1]} className="r-border b-border"/>  
-            <Tile  value={tiles[2]}  className=" b-border"/>  
-            <Tile  value={tiles[3]} className="r-border b-border"/> 
-            <Tile  value={tiles[4]} className="r-border b-border"/>  
-            <Tile  value={tiles[5]} className=" b-border"/>
-            <Tile  value={tiles[6]} className="r-border"/>
-            <Tile  value={tiles[7]} className="r-border "/>
-            <Tile  value={tiles[8]} />
+            <Tile
+             onClick = {()=> onClickTile(0)} 
+             value={tiles[0]} 
+              className="r-border b-border"
+              /> 
+            <Tile 
+             onClick = {()=> onClickTile(1)}
+             value={tiles[1]} 
+            className="r-border b-border"
+            />  
+            <Tile 
+            onClick = {()=> onClickTile(2)} 
+             value={tiles[2]}
+              className=" b-border"
+            />  
+            <Tile 
+            onClick = {()=> onClickTile(3)}
+             value={tiles[3]}
+             className="r-border b-border"
+            /> 
+            <Tile 
+            onClick = {()=> onClickTile(4)}
+             value={tiles[4]}
+             className="r-border b-border"
+            />  
+            <Tile
+             onClick = {()=> onClickTile(5)} 
+            value={tiles[5]} 
+            className=" b-border"
+            />
+            <Tile
+             onClick = {()=> onClickTile(6)}
+             value={tiles[6]}
+            className="r-border"
+            />
+            <Tile 
+            onClick = {()=> onClickTile(7)}
+             value={tiles[7]} 
+            className="r-border "
+            />
+            <Tile
+            onClick = {()=> onClickTile(8)} 
+             value={tiles[8]}
+             />
             
             <Strike /> 
         </div>
     );
+    
 }
 
 export default Board;

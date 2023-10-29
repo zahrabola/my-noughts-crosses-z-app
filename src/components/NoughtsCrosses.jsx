@@ -7,7 +7,9 @@ import { useState } from 'react';
 const UserPlayer_X = 'X';
 const UserPlayer_O = 'O';
 
-
+const handleClickTile = (index) => {
+    console.log(index)
+}
 
 
 
@@ -17,7 +19,7 @@ const NoughtsCrosses = () => {
     return (
         <div>
          <h1>Noughts & Crosses</h1>
-         <Board tiles={tiles} />
+         <Board tiles={tiles} onClickTile={handleClickTile} />
          <GameOver />
          <Reset />
         </div>
