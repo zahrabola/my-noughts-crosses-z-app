@@ -4,10 +4,18 @@ import Strike from './Strike';
 
 const Board = () => {
     return (
-        <div>
-            <h3>  board</h3>
-          
+        <div className="board">
+            
+            <Tile /> 
+            <Tile />  
+            <Tile />  
+            <Tile /> 
+            <Tile />  
             <Tile />
+            <Tile />
+            <Tile />
+            <Tile />
+            
             <Strike />
         </div>
     );

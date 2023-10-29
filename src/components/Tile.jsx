@@ -2,8 +2,8 @@ import React from 'react';
 
 const Tile = () => {
     return (
-        <div>
-            tile
+        <div className='tile'>
+           x
         </div>
     );
 }
