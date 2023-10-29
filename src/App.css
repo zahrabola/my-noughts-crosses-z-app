@@ -54,3 +54,9 @@ display: grid;
   justify-content: center;
   align-items: center;
 }
+.r-border{
+  border-right: 0.2em solid #0074a6;
+}
+.b-border{
+  border-bottom: 0.2em solid #0074a6;
+}
