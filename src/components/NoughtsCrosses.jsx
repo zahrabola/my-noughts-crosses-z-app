@@ -13,6 +13,7 @@ const UserPlayer_O = 'O';
 const NoughtsCrosses = () => {
     const [tiles, setTiles] = useState(Array(9).fill(null))
     const [userTurn, setuserTurn] = useState(UserPlayer_X)
+    const [stikeClass, setstrikeClass] = useState()
 
     const handleClickTile = (index) => {
 //if statement that checkes the value
@@ -33,7 +34,7 @@ if(tiles[index] !== null) {
     return (
         <div>
          <h1>Noughts & Crosses</h1>
-         <Board userTurn={userTurn} tiles={tiles} onClickTile={handleClickTile} />
+         <Board stikeClass={stikeClass} userTurn={userTurn} tiles={tiles} onClickTile={handleClickTile} />
     
         </div>
     );

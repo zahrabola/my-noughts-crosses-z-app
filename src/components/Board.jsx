@@ -2,7 +2,7 @@ import React from 'react';
 import Tile from "./Tile"
 import Strike from './Strike';
 
-const Board = ({tiles, onClickTile, userTurn}) => {
+const Board = ({tiles, onClickTile, userTurn, stikeClass}) => {
     return (
         <div className="board">
             
@@ -60,7 +60,7 @@ const Board = ({tiles, onClickTile, userTurn}) => {
              value={tiles[8]}
              />
             
-            <Strike /> 
+            <Strike stikeClass={stikeClass} /> 
         </div>
     );
     

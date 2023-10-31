@@ -1,11 +1,12 @@
 import React from 'react';
 
-const Strike = () => {
+const Strike = ({stikeClass}) => {
     return (
-        <div>
-            strike 
+        <div className={`strike ${stikeClass}`}>
+           
         </div>
     );
 }
 
 export default Strike;
+//string interpolation 
