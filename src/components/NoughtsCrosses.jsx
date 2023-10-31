@@ -33,7 +33,7 @@ if(tiles[index] !== null) {
     return (
         <div>
          <h1>Noughts & Crosses</h1>
-         <Board tiles={tiles} onClickTile={handleClickTile} />
+         <Board userTurn={userTurn} tiles={tiles} onClickTile={handleClickTile} />
     
         </div>
     );
