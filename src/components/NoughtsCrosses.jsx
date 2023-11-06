@@ -2,12 +2,14 @@ import React from 'react';
 import Board from "./Board";
 //import GameOver from "./GameOver";
 //import Reset from "./Reset";
-import { useState } from 'react';
+import { useState, useEffect  } from 'react';
 
 const UserPlayer_X = 'X';
 const UserPlayer_O = 'O';
 
-
+function checkWin(){
+    console.log("Check Winner")
+}
 
 
 const NoughtsCrosses = () => {
@@ -20,6 +22,7 @@ const NoughtsCrosses = () => {
 if(tiles[index] !== null) {
     return;
 }
+
         console.log(index)
         const newTiles = [...tiles];
         newTiles[index] = userTurn
@@ -30,6 +33,12 @@ if(tiles[index] !== null) {
             setuserTurn(UserPlayer_X)
         }
     }
+
+    
+useEffect (() => {
+    checkWin()
+}, [tiles])
+
     
     return (
         <div>

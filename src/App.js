@@ -10,4 +10,4 @@ function App() {
 }
 
 export default App;
-///https://www.youtube.com/watch?v=4Gt_YyGf6B0&t=2861s  21.16
+///https://www.youtube.com/watch?v=4Gt_YyGf6B0&t=2861s  30.19
