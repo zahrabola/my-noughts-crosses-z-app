@@ -17,8 +17,8 @@ const winCombo = [
     {combo: [1, 4, 7], strikeClass: "strike-column-2" },
     {combo: [2, 5, 8], strikeClass: "strike-column-3" },
     //Diagonal 
-    {combo: [0, 4, 8], strikeClass: ".strike-diagonal-1" },
-    {combo: [2, 4, 6], strikeClass: ".strike-diagonal-2" },
+    {combo: [0, 4, 8], strikeClass: "strike-diagonal-1" },
+    {combo: [2, 4, 6], strikeClass: "strike-diagonal-2" },
 ];
 
 
@@ -29,6 +29,9 @@ function checkWin( tiles, setstrikeClass){
     const tileValue2 = tiles[combo[1]];
     const tileValue3 = tiles[combo[2]];
  
+    if(tileValue1 !==  null && tileValue1 === tileValue2 && tileValue1 === tileValue3 ){
+        setstrikeClass(strikeClass)
+    }
   }
 }
 
