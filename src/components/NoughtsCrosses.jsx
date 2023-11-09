@@ -1,8 +1,9 @@
 import React from 'react';
 import Board from "./Board";
-//import GameOver from "./GameOver";
 //import Reset from "./Reset";
 import { useState, useEffect  } from 'react';
+import GameOver from './GameOver';
+import GamesState from './GamesState';
 
 const UserPlayer_X = 'X';
 const UserPlayer_O = 'O';
@@ -40,6 +41,7 @@ const NoughtsCrosses = () => {
     const [tiles, setTiles] = useState(Array(9).fill(null))
     const [userTurn, setuserTurn] = useState(UserPlayer_X)
     const [stikeClass, setstrikeClass] = useState()
+    const [gameState, setGameState] = useState (GamesState.inProgress)
 
     const handleClickTile = (index) => {
 //if statement that checkes the value
@@ -68,7 +70,7 @@ useEffect (() => {
         <div>
          <h1>Noughts & Crosses</h1>
          <Board stikeClass={stikeClass} userTurn={userTurn} tiles={tiles} onClickTile={handleClickTile} />
-    
+    <GameOver gameState={gameState}/>
         </div>
     );
 }
