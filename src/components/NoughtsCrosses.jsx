@@ -62,7 +62,7 @@ if(tiles[index] !== null) {
 
     
 useEffect (() => {
-    checkWin(tiles, setstrikeClass)
+    checkWin(tiles, setstrikeClass, setGameState)
 }, [tiles])
 
     
