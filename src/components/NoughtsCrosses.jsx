@@ -23,7 +23,7 @@ const winCombo = [
 ];
 
 
-function checkWin( tiles, setstrikeClass){
+function checkWin( tiles, setstrikeClass,setGameState){
   //// console.log("Check Winner")
   for( const {combo, strikeClass} of winCombo){
     const tileValue1 = tiles[combo[0]];
@@ -32,6 +32,12 @@ function checkWin( tiles, setstrikeClass){
  
     if(tileValue1 !==  null && tileValue1 === tileValue2 && tileValue1 === tileValue3 ){
         setstrikeClass(strikeClass)
+        if(tileValue1 === UserPlayer_O){
+            setGameState(GamesState.UserPlayer_Owins);
+        }
+        else{
+            setGameState(GamesState.UserPlayer_Xwins);
+        }
     }
   }
 }
