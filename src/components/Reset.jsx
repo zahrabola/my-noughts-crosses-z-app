@@ -1,9 +1,16 @@
 import React from 'react';
+import GamesState from './GamesState';
 
-const Reset = () => {
+const Reset = ({gameState, onReset}) => {
+    if(gameState === GamesState.inProgress)
+    {
+        return;
+    }
     return (
         <div>
-            reset
+        <button  onClick={onReset} className='reset-btn'>
+            Reset 
+     </button>
         </div>
     );
 }
